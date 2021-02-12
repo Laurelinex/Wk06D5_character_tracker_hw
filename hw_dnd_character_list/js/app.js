@@ -43,6 +43,10 @@ const createCharacterListItem = function (form) {
     alignment.textContent = form.alignment.value;
     characterListItem.appendChild(alignment);
 
+    const portrait = document.createElement('img')
+    portrait.src = form.portrait.value
+    characterListItem.appendChild(portrait);
+
     return characterListItem;
 }
 
