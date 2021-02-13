@@ -25,21 +25,30 @@ body {
 #app > header {
     grid-area: header;
     background-color: brown;
+    color: cornsilk;
+    padding-left: 2vw;
 }
 
 #header-form {
-    background-color: yellow;
+    background-color: darkred;
+
 }
 
 #app > main {
     grid-area: main;
     overflow: auto;
-    padding: 15px 5px 10px 5px;
+    /* padding: 15px 5px 10px 5px; */
+    padding-left: 2vw;
+    background-image: url('https://motionarray.imgix.net/preview-155309-VSeK8VU1II-high_0015.jpg');
+    color: lightgoldenrodyellow;
 }
 
 #app > footer {
     grid-area: footer;
     background-color: brown;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    height: 3vw;
 }
 
 #form-wrapper {
