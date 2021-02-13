@@ -25,7 +25,7 @@ const handleNewCharacterFormSubmit = function (event) {
 
 const createCharacterListItem = function (form) {
     const characterListItem = document.createElement('li');
-
+    characterListItem.classList.add('character-list-item');
 
     const nameKin = document.createElement('h4');
     nameKin.textContent = `${form.name.value} the ${form.kin.value}`;

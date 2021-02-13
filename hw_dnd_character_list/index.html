@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&D Character List App</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <script src="js/app.js"></script>
 </head>
 <body>
@@ -21,7 +22,8 @@
             </div>
 
             <div class="form-item">
-                <label for="kin" class="primary">Kin</label>
+                <!-- Kin: Dropdown version -->
+                <!-- <label for="kin" class="primary">Kin</label>
                 <select id="kin">
                     <option value="" disabled selected></option>
                     <option value="Human">Human</option>
@@ -30,7 +32,34 @@
                     <option value="Orc">Orc</option>
                     <option value="Halfling">Halfling</option>
                     <option value="Tiefling">Tiefling</option>
-                </select>
+                </select> -->
+
+                <!-- Kind: Radio version -->
+                <p>Kin</p>
+                <div>
+                    <input type="radio" id="human" value="human" name="kin">
+                    <label for="human">Human</label>
+                </div>
+                <div>
+                    <input type="radio" id="elf" value="elf" name="kin">
+                    <label for="elf">Elf</label>
+                </div>
+                <div>
+                    <input type="radio" id="dwarf" value="dwarf" name="kin">
+                    <label for="dwarf">Dwarf</label>
+                </div>
+                <div>
+                    <input type="radio" id="orc" value="orc" name="kin">
+                    <label for="orc">Orc</label>
+                </div>
+                <div>
+                    <input type="radio" id="halfling" value="halfling" name="kin">
+                    <label for="halfling">Halfling</label>
+                </div>
+                <div>
+                    <input type="radio" id="tiefling" value="tiefling" name="kin">
+                    <label for="tiefling">Tiefling</label>
+                </div>
             </div>
 
             <div class="form-item">
