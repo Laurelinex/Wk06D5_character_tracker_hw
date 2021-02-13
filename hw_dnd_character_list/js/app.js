@@ -27,21 +27,21 @@ const createCharacterListItem = function (form) {
     const characterListItem = document.createElement('li');
 
 
-    const name = document.createElement('h4');
-    name.textContent = form.name.value;
-    characterListItem.appendChild(name);
+    const nameKin = document.createElement('h4');
+    nameKin.textContent = `${form.name.value} the ${form.kin.value}`;
+    characterListItem.appendChild(nameKin);
 
-    const kin = document.createElement('h5');
-    kin.textContent = form.kin.value;
-    characterListItem.appendChild(kin);
+    // const kin = document.createElement('h5');
+    // kin.textContent = form.kin.value;
+    // characterListItem.appendChild(kin);
 
-    const clss = document.createElement('p');
-    clss.textContent = form.class.value;
-    characterListItem.appendChild(clss);
+    const classAlignment = document.createElement('p');
+    classAlignment.textContent = `a ${form.alignment.value} ${form.class.value}`;
+    characterListItem.appendChild(classAlignment);
 
-    const alignment = document.createElement('p');
-    alignment.textContent = form.alignment.value;
-    characterListItem.appendChild(alignment);
+    // const alignment = document.createElement('p');
+    // alignment.textContent = form.alignment.value;
+    // characterListItem.appendChild(alignment);
 
     const portrait = document.createElement('img')
     portrait.src = form.portrait.value
