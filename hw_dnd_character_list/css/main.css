@@ -9,3 +9,17 @@
 body {
     font-family: 'volkhovregular';
 }
+
+#form-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.primary {
+    display: block;
+    margin: 0;
+}
+
+.form-item {
+    margin-right: 4vw;
+}
