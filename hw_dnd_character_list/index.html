@@ -9,105 +9,116 @@
     <script src="js/app.js"></script>
 </head>
 <body>
+
+    <div id="app">
+
+        <header>
+            <h1>Dungeons & Dragons</h1>
+            <h2>Character List</h2>
+            <div id="header-form">
+                <form action="" id="new-character-form">
+                    <div id="form-wrapper">
+        
+                        <div class="form-item">
+                            <label for="name" class="primary">Name</label>
+                            <input type="text" id="name">
+                        </div>
+        
+                        <div class="form-item">
+                            <!-- Kin: Dropdown version -->
+                            <!-- <label for="kin" class="primary">Kin</label>
+                            <select id="kin">
+                                <option value="" disabled selected></option>
+                                <option value="Human">Human</option>
+                                <option value="Elf">Elf</option>
+                                <option value="Dwarf">Dwarf</option>
+                                <option value="Orc">Orc</option>
+                                <option value="Halfling">Halfling</option>
+                                <option value="Tiefling">Tiefling</option>
+                            </select> -->
+        
+                            <!-- Kind: Radio version -->
+                            <p class="primary">Kin</p>
+                            <div>
+                                <input type="radio" id="human" value="human" name="kin">
+                                <label for="human">Human</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="elf" value="elf" name="kin">
+                                <label for="elf">Elf</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="dwarf" value="dwarf" name="kin">
+                                <label for="dwarf">Dwarf</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="orc" value="orc" name="kin">
+                                <label for="orc">Orc</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="halfling" value="halfling" name="kin">
+                                <label for="halfling">Halfling</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="tiefling" value="tiefling" name="kin">
+                                <label for="tiefling">Tiefling</label>
+                            </div>
+                        </div>
+        
+                        <div class="form-item">
+                            <label for="class" class="primary">Class</label>
+                            <select id="class">
+                                <option value="" disabled selected></option>
+                                <option value="Barbarian">Barbarian</option>
+                                <option value="Fighter">Fighter</option>
+                                <option value="Ranger">Ranger</option>
+                                <option value="Wizard">Wizard</option>
+                                <option value="Rogue">Rogue</option>
+                                <option value="Cleric">Cleric</option>
+                                <option value="Bard">Bard</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-item">
+                            <label for="alignment" class="primary">Alignment</label>
+                            <select id="alignment">
+                                <option value="" disabled selected></option>
+                                <option value="lawful good">Lawful good</option>
+                                <option value="neutral good">Neutral good</option>
+                                <option value="chaotic good">Chaotic good</option>
+                                <option value="lawful neutral">Lawful neutral</option>
+                                <option value="true neutral">True neutral</option>
+                                <option value="chaotic neutral">Chaotic neutral</option>
+                                <option value="lawful evil">Lawful evil</option>
+                                <option value="neutral evil">Neutral evil</option>
+                                <option value="chaotic evil">Chaotic evil</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-item portrait">
+                            <label for="portrait">Portrait</label><br>
+                            <input type="url" id="portrait"
+                                placeholder="https://example.com"
+                                pattern="https://.*">         
+                        </div>
+        
+                    </div>
+        
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </header>
+        
+        <main>
+            <h3>Created characters</h3>
+            <ul id="character-list"></ul>
+        </main>
+
+        <footer>
+            <button id="delete-all">Delete All</button>
+        </footer>
+        
+    </div>
     
-    <h1>Dungeons & Dragons</h1>
-    <h2>Character List</h2>
-
-    <form action="" id="new-character-form">
-        <div id="form-wrapper">
-
-            <div class="form-item">
-                <label for="name" class="primary">Name</label>
-                <input type="text" id="name">
-            </div>
-
-            <div class="form-item">
-                <!-- Kin: Dropdown version -->
-                <!-- <label for="kin" class="primary">Kin</label>
-                <select id="kin">
-                    <option value="" disabled selected></option>
-                    <option value="Human">Human</option>
-                    <option value="Elf">Elf</option>
-                    <option value="Dwarf">Dwarf</option>
-                    <option value="Orc">Orc</option>
-                    <option value="Halfling">Halfling</option>
-                    <option value="Tiefling">Tiefling</option>
-                </select> -->
-
-                <!-- Kind: Radio version -->
-                <p class="primary">Kin</p>
-                <div>
-                    <input type="radio" id="human" value="human" name="kin">
-                    <label for="human">Human</label>
-                </div>
-                <div>
-                    <input type="radio" id="elf" value="elf" name="kin">
-                    <label for="elf">Elf</label>
-                </div>
-                <div>
-                    <input type="radio" id="dwarf" value="dwarf" name="kin">
-                    <label for="dwarf">Dwarf</label>
-                </div>
-                <div>
-                    <input type="radio" id="orc" value="orc" name="kin">
-                    <label for="orc">Orc</label>
-                </div>
-                <div>
-                    <input type="radio" id="halfling" value="halfling" name="kin">
-                    <label for="halfling">Halfling</label>
-                </div>
-                <div>
-                    <input type="radio" id="tiefling" value="tiefling" name="kin">
-                    <label for="tiefling">Tiefling</label>
-                </div>
-            </div>
-
-            <div class="form-item">
-                <label for="class" class="primary">Class</label>
-                <select id="class">
-                    <option value="" disabled selected></option>
-                    <option value="Barbarian">Barbarian</option>
-                    <option value="Fighter">Fighter</option>
-                    <option value="Ranger">Ranger</option>
-                    <option value="Wizard">Wizard</option>
-                    <option value="Rogue">Rogue</option>
-                    <option value="Cleric">Cleric</option>
-                    <option value="Bard">Bard</option>
-                </select>
-            </div>
-
-            <div class="form-item">
-                <label for="alignment" class="primary">Alignment</label>
-                <select id="alignment">
-                    <option value="" disabled selected></option>
-                    <option value="lawful good">Lawful good</option>
-                    <option value="neutral good">Neutral good</option>
-                    <option value="chaotic good">Chaotic good</option>
-                    <option value="lawful neutral">Lawful neutral</option>
-                    <option value="true neutral">True neutral</option>
-                    <option value="chaotic neutral">Chaotic neutral</option>
-                    <option value="lawful evil">Lawful evil</option>
-                    <option value="neutral evil">Neutral evil</option>
-                    <option value="chaotic evil">Chaotic evil</option>
-                </select>
-            </div>
-
-            <div class="form-item portrait">
-                <label for="portrait">Portrait</label><br>
-                <input type="url" id="portrait"
-                    placeholder="https://example.com"
-                    pattern="https://.*">         
-            </div>
-
-        </div>
-
-        <input type="submit" value="Add">
-    </form>
-
-    <h3>Created characters</h3>
-    <ul id="character-list"></ul>
-
-    <button id="delete-all">Delete All</button>
-
 </body>
 </html>
