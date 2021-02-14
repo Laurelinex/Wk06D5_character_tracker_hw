@@ -87,6 +87,7 @@ body {
     width: 312px;
     height: 305px;
     /* border: yellow solid; */
+    filter: sepia(50%);
 }
 
 .character-list-item img {
@@ -99,6 +100,7 @@ body {
     border-color: transparent;
     border-radius: 10px;
     /* border: solid purple; */
+    /* filter: blur(1px); */
 }
 
 .character-list-item p {
