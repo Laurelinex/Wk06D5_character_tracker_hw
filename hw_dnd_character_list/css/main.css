@@ -130,3 +130,12 @@ body {
     text-align:center;
     transition: all 0.2s;
 }
+
+.radio div {
+    width: 7em;
+}
+
+.traits div {
+    display:inline-block;
+    width:10em;
+}

@@ -20,10 +20,11 @@
         
                         <div class="form-item">
                             <label for="name" class="primary">Name</label>
+                            <br>
                             <input type="text" id="name" required>
                         </div>
         
-                        <div class="form-item">
+                        <div class="form-item radio">
                             <!-- Kin: Dropdown version -->
                             <!-- <label for="kin" class="primary">Kin</label>
                             <select id="kin">
@@ -38,6 +39,7 @@
         
                             <!-- Kin: Radio version -->
                             <p class="primary">Kin</p>
+                            <br>
                             <div>
                                 <input type="radio" id="human" value="Human" name="kin" required>
                                 <label for="human">Human</label>
@@ -64,7 +66,7 @@
                             </div>
                         </div>
         
-                        <div class="form-item">
+                        <div class="form-item radio">
                             <!-- Class: dropdown version -->
                             <!-- <label for="class" class="primary">Class</label>
                             <select id="class" required>
@@ -80,6 +82,7 @@
 
                             <!-- Class: radio version -->
                             <p class="primary">Class</p>
+                            <br>
                             <div>
                                 <input type="radio" id="barbarian" value="Barbarian" name="class" required>
                                 <label for="barbarian">Barbarian</label>
@@ -112,6 +115,7 @@
         
                         <div class="form-item">
                             <label for="alignment" class="primary">Alignment</label>
+                            <br>
                             <select id="alignment" required>
                                 <option value="" disabled selected></option>
                                 <option value="lawful good">Lawful good</option>
@@ -127,10 +131,64 @@
                         </div>
         
                         <div class="form-item portrait">
-                            <label for="portrait">Portrait</label><br>
+                            <label for="portrait">Portrait</label>
+                            <br><br>
                             <input type="url" id="portrait"
                                 placeholder="https://example.com"
                                 pattern="https://.*">         
+                        </div>
+
+                        <div class="form-item traits">
+                            <p class="primary">Two personality traits</p>
+                            <br>
+                            <div>
+                                <input type="checkbox" id="absent-minded" value="absent-minded" name="traits" required>
+                                <label for="absent-minded">Absent-minded</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="dishonest" value="dishonest" name="traits">
+                                <label for="dishonest">Dishonest</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="easygoing" value="easygoing" name="traits">
+                                <label for="easygoing">Easygoing</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="earnest" value="earnest" name="traits">
+                                <label for="earnest">Earnest</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="reckless" value="reckless" name="traits">
+                                <label for="reckless">Reckless</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="quick" value="quick" name="traits">
+                                <label for="quick">Quick</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slow" value="slow" name="traits">
+                                <label for="slow">Slow</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="passionate" value="passionate" name="traits">
+                                <label for="passionate">Passionate</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="musclebound" value="musclebound" name="traits">
+                                <label for="musclebound">Musclebound</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="slippery" value="slippery" name="traits">
+                                <label for="slippery">Slippery</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="detached" value="detached" name="traits">
+                                <label for="detached">Detached</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="perceptive" value="perceptive" name="traits">
+                                <label for="perceptive">Perceptive</label>
+                            </div>
                         </div>
         
                     </div>
