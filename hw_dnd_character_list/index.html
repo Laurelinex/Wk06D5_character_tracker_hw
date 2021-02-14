@@ -13,15 +13,14 @@
     <div id="app">
 
         <header>
-            <h1>Dungeons & Dragons</h1>
-            <h2>Character Tracker</h2>
+            <h1>D&D Character Tracker</h1>
             <div id="header-form">
                 <form action="" id="new-character-form">
                     <div id="form-wrapper">
         
                         <div class="form-item">
                             <label for="name" class="primary">Name</label>
-                            <input type="text" id="name">
+                            <input type="text" id="name" required>
                         </div>
         
                         <div class="form-item">
@@ -37,37 +36,38 @@
                                 <option value="Tiefling">Tiefling</option>
                             </select> -->
         
-                            <!-- Kind: Radio version -->
+                            <!-- Kin: Radio version -->
                             <p class="primary">Kin</p>
                             <div>
-                                <input type="radio" id="human" value="human" name="kin">
+                                <input type="radio" id="human" value="Human" name="kin" required>
                                 <label for="human">Human</label>
                             </div>
                             <div>
-                                <input type="radio" id="elf" value="elf" name="kin">
+                                <input type="radio" id="elf" value="Elf" name="kin">
                                 <label for="elf">Elf</label>
                             </div>
                             <div>
-                                <input type="radio" id="dwarf" value="dwarf" name="kin">
+                                <input type="radio" id="dwarf" value="Dwarf" name="kin">
                                 <label for="dwarf">Dwarf</label>
                             </div>
                             <div>
-                                <input type="radio" id="orc" value="orc" name="kin">
+                                <input type="radio" id="orc" value="Orc" name="kin">
                                 <label for="orc">Orc</label>
                             </div>
                             <div>
-                                <input type="radio" id="halfling" value="halfling" name="kin">
+                                <input type="radio" id="halfling" value="Halfling" name="kin">
                                 <label for="halfling">Halfling</label>
                             </div>
                             <div>
-                                <input type="radio" id="tiefling" value="tiefling" name="kin">
+                                <input type="radio" id="tiefling" value="Tiefling" name="kin">
                                 <label for="tiefling">Tiefling</label>
                             </div>
                         </div>
         
                         <div class="form-item">
-                            <label for="class" class="primary">Class</label>
-                            <select id="class">
+                            <!-- Class: dropdown version -->
+                            <!-- <label for="class" class="primary">Class</label>
+                            <select id="class" required>
                                 <option value="" disabled selected></option>
                                 <option value="Barbarian">Barbarian</option>
                                 <option value="Fighter">Fighter</option>
@@ -76,12 +76,43 @@
                                 <option value="Rogue">Rogue</option>
                                 <option value="Cleric">Cleric</option>
                                 <option value="Bard">Bard</option>
-                            </select>
+                            </select> -->
+
+                            <!-- Class: radio version -->
+                            <p class="primary">Class</p>
+                            <div>
+                                <input type="radio" id="barbarian" value="Barbarian" name="class" required>
+                                <label for="barbarian">Barbarian</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="fighter" value="Fighter" name="class" required>
+                                <label for="fighter">Fighter</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="ranger" value="Ranger" name="class" required>
+                                <label for="ranger">Ranger</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="wizard" value="Wizard" name="class" required>
+                                <label for="wizard">Wizard</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="rogue" value="Rogue" name="class" required>
+                                <label for="rogue">Rogue</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cleric" value="Cleric" name="class" required>
+                                <label for="cleric">Cleric</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="bard" value="Bard" name="class" required>
+                                <label for="bard">Bard</label>
+                            </div>
                         </div>
         
                         <div class="form-item">
                             <label for="alignment" class="primary">Alignment</label>
-                            <select id="alignment">
+                            <select id="alignment" required>
                                 <option value="" disabled selected></option>
                                 <option value="lawful good">Lawful good</option>
                                 <option value="neutral good">Neutral good</option>
@@ -104,7 +135,7 @@
         
                     </div>
         
-                    <input type="submit" value="Add">
+                    <input class="button" type="submit" value="Add">
                 </form>
             </div>
         </header>
@@ -115,7 +146,7 @@
         </main>
 
         <footer>
-            <button id="delete-all">Delete All</button>
+            <button class="button" id="delete-all">Delete All</button>
         </footer>
         
     </div>

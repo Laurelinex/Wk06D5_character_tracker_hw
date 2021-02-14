@@ -27,7 +27,7 @@ const createCharacterListItem = function (form) {
     const characterListItem = document.createElement('li');
     characterListItem.classList.add('character-list-item');
 
-    const nameKin = document.createElement('h4');
+    const nameKin = document.createElement('h3');
     nameKin.textContent = `${form.name.value} the ${form.kin.value}`;
     characterListItem.appendChild(nameKin);
 
@@ -46,11 +46,12 @@ const createCharacterListItem = function (form) {
     const portrait = document.createElement('img')
     portrait.src = form.portrait.value
     characterListItem.appendChild(portrait);
+    // portrait.classList.add('character-list-item-portrait');
 
     return characterListItem;
-}
+};
 
 const handleDeleteAllClick = function() {
     const characterList = document.querySelector('#character-list');
     characterList.innerHTML = '';
-}
+};
