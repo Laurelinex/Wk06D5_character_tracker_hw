@@ -10,6 +10,7 @@ body {
     font-family: 'volkhovregular';
     margin: 0;
     background-image: url('https://motionarray.imgix.net/preview-155309-VSeK8VU1II-high_0015.jpg');
+    background-size: cover;
 }
 
 #app {

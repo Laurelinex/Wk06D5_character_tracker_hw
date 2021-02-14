@@ -16,11 +16,13 @@ const handleNewCharacterFormSubmit = function (event) {
     // const characterList = document.querySelector('#character-list');
     // characterList.appendChild(characterListItem);
 
-    const characterListItem = createCharacterListItem(event.target);
-    const characterList = document.querySelector('#character-list');
-    characterList.appendChild(characterListItem);
+    if (CheckBoxCount()) {
+        const characterListItem = createCharacterListItem(event.target);
+        const characterList = document.querySelector('#character-list');
+        characterList.appendChild(characterListItem);
 
-    this.reset();
+        this.reset();
+    }
 };
 
 const createCharacterListItem = function (form) {
@@ -46,12 +48,30 @@ const createCharacterListItem = function (form) {
     const portrait = document.createElement('img')
     portrait.src = form.portrait.value
     characterListItem.appendChild(portrait);
-    // portrait.classList.add('character-list-item-portrait');
 
     return characterListItem;
-};
+}; 
 
 const handleDeleteAllClick = function() {
     const characterList = document.querySelector('#character-list');
     characterList.innerHTML = '';
+};
+
+function CheckBoxCount() {
+    const inputList = document.getElementsByName("traits");
+    let numChecked = 0;
+
+    for (let i = 0; i < inputList.length; i++) {
+        if (inputList[i].type == "checkbox" && inputList[i].checked) {
+            numChecked += 1;
+        }
+    }
+    if (numChecked < 2) {
+        alert("Pick 2!"); return false;
+    } else if (numChecked > 2) {
+        alert("Pick only 2!"); return false;
+    }
+
+    return true;
+
 };
