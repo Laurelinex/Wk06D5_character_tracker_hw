@@ -45,9 +45,13 @@ const createCharacterListItem = function (form) {
     // alignment.textContent = form.alignment.value;
     // characterListItem.appendChild(alignment);
 
-    const portrait = document.createElement('img')
-    portrait.src = form.portrait.value
+    const portrait = document.createElement('img');
+    portrait.src = form.portrait.value;
     characterListItem.appendChild(portrait);
+
+    const traits = document.createElement('p');
+    traits.textContent = `Traits: ${traitsInput()}`;
+    characterListItem.appendChild(traits);
 
     return characterListItem;
 }; 
@@ -74,4 +78,17 @@ function CheckBoxCount() {
 
     return true;
 
+};
+
+function traitsInput() {
+        
+    const inputList = document.getElementsByName("traits");
+    let text = [];
+
+    for (let i = 0; i < inputList.length; i++) {
+        if (inputList[i].checked) {
+            text.push(inputList[i].value);
+        }
+    }
+    return text.join(", ")
 };
